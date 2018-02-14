@@ -1,8 +1,8 @@
 'use strict'
 
 $(document).ready(function(){
-    $('.menyburgare, .burgerbox').click(function(){
+    $('.menyburgare, .close').click(function(){
         $('.burgerbox').toggleClass('visible');
-    })
+    });
 
 });

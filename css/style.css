@@ -7,29 +7,43 @@ body {
     display:grid;
     grid-template-rows: 70px auto;
     width:400px;
+    grid-gap:20px;
+    padding:10px;
 }
 
 section#page1sec {
     display:grid;
-    grid-template-rows: repeat(auto);
-    overflow: hidden;
+    grid-auto-rows: minmax(245px, 250px);
+    grid-auto-flow: row;
     grid-row-gap: 20px;
-    
 }
 
 section#page1sec a {
-    max-height: 300px;
     text-decoration:none;
+    overflow:hidden;
 }
 
 section#page1sec a article {
     display: grid;
-    grid-template-rows: 70px 245px;
+    grid-template-rows: 70px 175px;
     grid-row-gap:5px;
     background-color:pink;
-    overflow:hidden;
-    justify-items: center;
     position: relative;
+}
+
+section#page1sec a article h2, section#page1sec a article img {
+    display:grid;
+    align-content: center;
+    justify-content:center;
+    
+}
+
+article h2 {
+    margin:0;
+    background-color: lightpink;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:none;
+    color:white;
 }
 
 article img {
@@ -60,18 +74,9 @@ header nav {
     display:grid;
     align-items: center;
     justify-items: center;
-           
-    
 }
 
-article h2 {
-    background-color: lightpink;
-    font-family: Arial, Helvetica, sans-serif;
-    /*text-align: center;*/
-    align-self:center;
-    text-decoration:none;
-    color:white;
-}
+
 
 article footer {
     position:absolute;
@@ -97,18 +102,40 @@ i {
 
 div.burgerbox {
     position:absolute;
-    width:100%;
+    width:420px;
     height:40vh;
     background:rgba(0,0,0,0.7);
     z-index: 100;
     left:0;
     top:-40vh;
     transition: 0.5s linear all;
+    display:grid;
+    grid-auto-columns: 1fr;
+}
+
+div.burgerbox a{
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    border-bottom: 2px white solid;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    
+
 }
 
 div.visible {
     top:0vh;
     transition: 0.5s linear all;
+}
+
+/* LULL-LULL*/
+
+a, header {
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(100,100,100,0.8);
 }
 
 
